@@ -52,6 +52,18 @@ contract Variables{
         address sender = msg.sender; // address of the caller
 
     }
+
+     uint public price;
+
+    // send a transaction to write to a state variable
+    function set(uint _price) public {
+        price = _price;
+    }
+
+    // read from a state variable without sending transaction
+    function get() public view returns (uint){
+        return  price;
+    }
 }
 
 contract Constants{
