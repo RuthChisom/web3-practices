@@ -3,9 +3,22 @@ pragma solidity ^0.8.26;
 
 contract Primitives{
     bool public friend = true;
+    /*
+    uint stands for unsigned integer, meaning non negative integers
+        uint8   ranges from 0 to 2 ** 8 - 1
+        uint16  ranges from 0 to 2 ** 16 - 1
+        ...
+        uint256 ranges from 0 to 2 ** 256 - 1
+    */
     uint8 public u8 = 1;
     uint256 public u256 = 456;
     uint public u = 123; // uint is same as uint256
+
+    /*
+    Negative numbers are allowed for int types.
+    int256 ranges from -2 ** 255 to 2 ** 255 - 1
+    int128 ranges from -2 ** 127 to 2 ** 127 - 1
+    */
     int8 public i8 = -1;
     int256 public i256 = 456;
     int public i = -123;  // int is same as int256
@@ -33,9 +46,6 @@ contract Primitives{
     uint256 public defaultUint; // 0
     int256 public defaultInt; // 0
     address public defaultAddr; // 0x0000000000000000000000000000000000000000
-
-
-
 }
 
 contract Variables{
@@ -53,11 +63,11 @@ contract Variables{
 
     }
 
-     uint public price;
+     uint public num;
 
     // send a transaction to write to a state variable
-    function set(uint _price) public {
-        price = _price;
+    function set(uint _num) public {
+        price = _num;
     }
 
     // read from a state variable without sending transaction
@@ -66,12 +76,15 @@ contract Variables{
     }
 }
 
+/* Constants are variables that cannot be modified.
+Their value is hard coded and using constants can save gas cost. */
 contract Constants{
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
     uint public constant MY_UNIT = 123;
     // use uppercase for constant variables
 }
 
+// Immutable variables are like constants. Values of immutable variables can be set inside the constructor but cannot be modified afterwards.
 contract Immutable{
     address public immutable myAddr;
     uint public immutable myUint;
