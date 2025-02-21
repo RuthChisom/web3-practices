@@ -2,7 +2,7 @@
 
 | Term | Meaning |
 |-----:|-----------|
-|     1| JavaScript|
+| gas limit | JavaScript|
 |     2| Python    |
 |     3| SQL       |
 
