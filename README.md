@@ -2,9 +2,8 @@
 
 | Term | Meaning |
 |-----:|-----------|
-| gas limit | JavaScript|
-|     2| Python    |
-|     3| SQL       |
+|      gas limit | max amount of gas you're willing to use for your transaction, set by you|
+| block gas limit| max amount of gas allowed in a block, set by the network |
+| gas spent| total amount of gas used in a transaction |
+| gas price| how much ether you are willing to pay per gas |
 
-(max amount of gas you're willing to use for your transaction, set by you)
-block gas limit (max amount of gas allowed in a block, set by the network)
